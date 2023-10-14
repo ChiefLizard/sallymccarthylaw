@@ -1,112 +1,61 @@
 import Image from 'next/image'
+import type { Metadata } from 'next'
+
+const siteName = process.env.NEXT_PUBLIC_SITE_NAME;
+
+export const metadata: Metadata = {
+  title: `Intellectual Proprty Law Firm - ${siteName}`,
+  description: 'McCarthy Godlewski LLC is an Intellectual Property Law Firm located in Wisconsin committed to protect your ideas, creative and inventions.',
+}
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex min-h-[calc(100vh-69px)] flex-col">
+      <div 
+        className="bg-[url('/images/Gavel_Horizontal_iPad_RGB_D.jpg')] bg-center bg-no-repeat bg-cover min-h-688"
+      >
+        <div className="container p-8 lg:py-48">
+          <h1>
+            <span className="text-white font-medium text-xl lg:tracking-wide lg:text-3xl"
+            >
+              Intellectual Property
+            </span>
+            <br />
+            <span className="text-secondary text-6xl uppercase font-medium border-t border-b border-secondary m-0 lg:text-8xl">Law Firm</span><br />
+            <span className="text-white text-xl font-medium leading-tight lg: tracking-wide lg:text-3xl lg:mt-4 ">Protect Your Ideas &amp; Inventions</span>
+          </h1>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+      <div className="w-full bg-secondary px-4 py-8">
+        <h2 className="text-primary text-center m-0 text-lg leading-tight">McCarthy Godlewski LLC is an Intellectual Property Law Firm located in Wisconsin</h2>
+      </div>
+      <div className="w-full flex justify-center">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src="/images/Tractor_Mobile.png"
+          width={1200}
+          height={350}
+          alt=""
         />
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="p-4 container container-sm pb-16">
+        <p>
+          The importance of Intellectual Property is increasing. McCarthy Godlewski LLC is an Intellectual Property Law Firm located in the Fox Valley and serves clients throughout the State of Wisconsin and the United States.
+        </p>
+        <p>
+          McCarthy Godlewski LLC is committed to protect your ideas, creative and inventions. The Firm is experienced in advising and counseling clients as to what your rights are and how to protect them. McCarthy Godlewski LLC is dedicated to the needs of its clients, from individuals and start-ups to large corporations.
+        </p>
+        <p>
+          The Firm seeks to understand each client’s needs and objectives and counsel each client as to how to obtain the best Intellectual Property Protection for that client. McCarthy Godlewski LLC provides personal service not found in larger firms and seeks to deliver quality work tailored to each client’s needs. The firm provides personal attention and competitive rates only a small firm can offer.
+        </p>
+        <p>
+          Protect the value of your ideas. Protect your Intellectual Property assets. McCarthy Godlewski LLC provides services in the areas of Trademark, Copyright, Trade Secrets, License Agreements, Non-Disclosure Agreements, Assignments, and Inventory of Intellectual Property assets.
+        </p>
+        <p>
+          In addition, the firm has established formal associations with law firms in many of the world’s primary commercial centers to better serve the international needs of clients.
+        </p>
+        <p>
+          The firm is committed to providing the highest level of client service. From its inception, an emphasis has been placed on providing legal services that make sense from the client’s perspective.
+        </p>
       </div>
     </main>
   )
