@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import type { Metadata } from 'next'
 
 const siteName = process.env.NEXT_PUBLIC_SITE_NAME;
