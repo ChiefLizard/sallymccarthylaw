@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Frank_Ruhl_Libre } from 'next/font/google'
 import Footer from '@/components/footer'
+import Header from '@/components/header'
 
 const frankRuhlLibre = Frank_Ruhl_Libre({ subsets: ['latin'] })
 
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={frankRuhlLibre.className}>
+        <Header />
         {children}
         <Footer />
       </body>

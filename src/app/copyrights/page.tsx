@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Copyrights() {
   return (
-    <main className="flex min-h-[calc(100vh-69px)] flex-col">
+    <main className="flex min-h-[calc(100vh-202px)] flex-col">
       <div 
         className="bg-[url('/images/Copyrights_RGB.jpg')] bg-center bg-no-repeat bg-cover"
       >

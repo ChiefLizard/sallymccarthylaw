@@ -10,24 +10,23 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="flex min-h-[calc(100vh-69px)] flex-col">
+    <main className="flex min-h-[calc(100vh-202px)] flex-col">
       <div 
         className="bg-[url('/images/Gavel_Horizontal_iPad_RGB_D.jpg')] bg-center bg-no-repeat bg-cover min-h-688"
       >
         <div className="container p-8 lg:py-48">
-          <h1>
-            <span className="text-white font-medium text-xl lg:tracking-wide lg:text-3xl"
+          <h1 className="flex flex-col max-w-max">
+            <span className="text-white font-medium text-xl pb-4 lg:tracking-wide lg:text-3xl"
             >
               Intellectual Property
             </span>
-            <br />
-            <span className="text-secondary text-6xl uppercase font-medium border-t border-b border-secondary m-0 lg:text-8xl">Law Firm</span><br />
-            <span className="text-white text-xl font-medium leading-tight lg: tracking-wide lg:text-3xl lg:mt-4 ">Protect Your Ideas &amp; Inventions</span>
+            <span className="text-secondary text-6xl py-4 uppercase font-medium border-t border-b border-secondary m-0 lg:text-8xl">Law Firm</span>
+            <span className="text-white text-xl font-medium leading-tight lg: tracking-wide lg:text-3xl pt-4 ">Protect Your Ideas &amp; Inventions</span>
           </h1>
         </div>
       </div>
       <div className="w-full bg-secondary px-4 py-8">
-        <h2 className="text-primary text-center m-0 text-lg leading-tight">McCarthy Godlewski LLC is an Intellectual Property Law Firm located in Wisconsin</h2>
+        <h2 className="text-primary text-center m-0 leading-tight text-xl lg:text-2xl">McCarthy Godlewski LLC is an Intellectual Property Law Firm located in Wisconsin</h2>
       </div>
       <div className="w-full flex justify-center">
         <Image

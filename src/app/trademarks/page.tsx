@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Trademarks() {
   return (
-    <main className="flex min-h-[calc(100vh-69px)] flex-col">
+    <main className="flex min-h-[calc(100vh-202px)] flex-col">
       <div 
         className="bg-[url('/images/Trademarks_RGB.jpg')] bg-center bg-no-repeat bg-cover"
       >

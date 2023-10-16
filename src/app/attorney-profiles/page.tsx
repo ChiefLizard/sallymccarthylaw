@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import type { Metadata } from 'next'
 
 const siteName = process.env.NEXT_PUBLIC_SITE_NAME;
@@ -10,9 +9,9 @@ export const metadata: Metadata = {
 
 const Profile = () => {
   return (
-    <main className="flex min-h-[calc(100vh-69)] flex-col">
+    <main className="flex min-h-[calc(100vh-202px)] flex-col">
       <div className="container p-4 lg: py-8">
-        <div className="flex flex-col-reverse items-center lg:grid lg:grid-cols-[3fr_1fr] lg:content-start">
+        <div className="flex flex-col-reverse items-center lg:grid lg:grid-cols-[1fr_336px] lg:items-start">
           <div>
             <h1 className="text-primary">Sally McCarthy Godlewski</h1>
             <p>
@@ -30,11 +29,12 @@ const Profile = () => {
   
           </div>
           <div className="pb-12 flex lg:pl-24 lg:pb-0">
-            <Image 
+            <img 
               src="/images/Sally-McCarthy-Godlewski.jpg"
-              width={240}
-              height={300}
+              width="240px"
+              height="300px"
               alt="Sally McCarthy Godlewski"
+              className="mt-0 lg:mt-20"
             />
           </div>
         </div>

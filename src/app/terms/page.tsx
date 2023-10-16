@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Terms() {
   return (
-    <main className="flex min-h-[calc(100vh-69px)] flex-col">
+    <main className="flex min-h-[calc(100vh-202px)] flex-col">
 
       <div className="p-4 container container-sm">
         <h1 className="text-primary">TERMS AND CONDITIONS</h1>

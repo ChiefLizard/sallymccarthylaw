@@ -8,6 +8,7 @@
   --gray-light: #f6f6f6;
   --gray-dark: #333333;
   --neutral: #1b1b1b;
+  --sky: #418cbe;
 }
 
 body {
@@ -65,4 +66,22 @@ p a:hover {
 .btn:hover {
   background: var(--secondary);
   color: var(--primary);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--gray-dark);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
 }

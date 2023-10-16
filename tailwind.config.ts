@@ -20,6 +20,7 @@ const config: Config = {
       'gray-dark': '#333333',
       'neutral': '#1b1b1b',
       'white': '#ffffff',
+      'sky': '#418cbe',
     },
     fontFamily: {
       serif: ['Frank Ruhl Libre', 'serif'],
