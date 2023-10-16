@@ -12,11 +12,11 @@ export default function Home() {
   return (
     <main className="flex min-h-[calc(100vh-202px)] flex-col">
       <div 
-        className="bg-[url('/images/Gavel_Horizontal_iPad_RGB_D.jpg')] bg-center bg-no-repeat bg-cover min-h-688"
+        className="bg-[url('/images/Gavel_Horizontal_iPad_RGB_D.jpg')] bg-center bg-no-repeat bg-cover min-h-[400px] lg:min-h-[688px] flex items-center lg:-mt-[132px]"
       >
-        <div className="container p-8 lg:py-48">
+        <div className="container p-8">
           <h1 className="flex flex-col max-w-max">
-            <span className="text-white font-medium text-xl pb-4 lg:tracking-wide lg:text-3xl"
+            <span className="text-white font-medium text-xl pb-4 lg:tracking-wide lg:text-3xl lg:pt-[132px]"
             >
               Intellectual Property
             </span>

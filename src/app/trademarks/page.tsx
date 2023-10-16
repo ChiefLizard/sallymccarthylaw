@@ -11,11 +11,11 @@ export default function Trademarks() {
   return (
     <main className="flex min-h-[calc(100vh-202px)] flex-col">
       <div 
-        className="bg-[url('/images/Trademarks_RGB.jpg')] bg-center bg-no-repeat bg-cover"
+        className="bg-[url('/images/Trademarks_RGB.jpg')]  bg-right bg-no-repeat bg-cover min-h-[100px] lg:min-h-[550px] flex items-center lg:-mt-[132px]"
       >
-        <p className="py-64">&nbsp;</p>
+        <p className="py-16 lg:py-64 lg:pt-[132px]">&nbsp;</p>
       </div>
-      <div className="p-4 container container-sm">
+      <div className="p-4 container container-sm pb-16">
         <h1 className="text-primary">Trademarks</h1>
         <p>
         A Trademark may be a name, a design, or a logo which is associated with your particular product or service. Business owners often own valuable Trademarks and have invested time, effort and money to create a ‘brand’ or identity for their goods or services. McCarthy Godlewski LLC’s Trademark practice is experienced in Trademark Law, including all aspects from the basics of Trademark selection, application, prosecution, registration, and renewal as well as Trademark infringement and Trademark enforcement, domestically and internationally.

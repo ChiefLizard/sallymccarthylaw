@@ -11,11 +11,11 @@ export default function Copyrights() {
   return (
     <main className="flex min-h-[calc(100vh-202px)] flex-col">
       <div 
-        className="bg-[url('/images/Copyrights_RGB.jpg')] bg-center bg-no-repeat bg-cover"
+        className="bg-[url('/images/Copyrights_RGB.jpg')]  bg-right bg-no-repeat bg-cover min-h-[100px] lg:min-h-[550px] flex items-center lg:-mt-[132px]"
       >
-        <p className="py-64">&nbsp;</p>
+        <p className="py-16 lg:py-64 lg:pt-[132px]">&nbsp;</p>
       </div>
-      <div className="p-4 container container-sm">
+      <div className="p-4 container container-sm pb-16">
         <h1 className="text-primary">Copyrights</h1>
         <p>
         McCarthy Godlewski LLC’s Copyright practice is experienced at every level of Copyright Law, including all aspects from the basics of Copyright application and registration, to Copyright infringement, Copyright defense and Copyright enforcement.

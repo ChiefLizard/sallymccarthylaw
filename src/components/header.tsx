@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import useWindowDimensions from '@/hooks/useWindowDimensions';
+import useScrollPosition from '@/hooks/useScrollPosition';
 
 const pagesWithoutBanner = ["/attorney-profiles", "/links", "/terms", "/contact"]
 
@@ -10,6 +11,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [subMenuOpen, setSubMenuOpen] = useState(false);
   const { width } = useWindowDimensions();
+  const scrollPosition = useScrollPosition();
   const pathname = usePathname();
   const hasBackground = pagesWithoutBanner.includes(pathname);
   const isDesktop = !!width && width >= 1024;
@@ -18,11 +20,11 @@ const Navbar = () => {
     pathname === '/trade-secrets';
 
   return (
-    <header className={`sticky top-0 w-full bg-primary border-b border-secondary lg:bg-transparent`}>
-      <nav className={`flex ${open ? "flex-col" : "flex-row items-center"} p-4 lg:px-16 justify-between`}>
+    <header className={`sticky top-0 w-full border-b bg-primary border-secondary ${hasBackground || scrollPosition > 100 ? "lg:bg-primary" : "lg:bg-transparent"}`}>
+      <nav className={`flex ${open ? "flex-col" : "flex-row items-center"} px-4 lg:px-16 justify-between`}>
         {/* Logo */}
-        <div id="logo">
-          <Link href="/" title="Home" aria-label='Home'>
+        <div id="logo" className="h-[132px] flex items-center">
+          <Link href="/" title="Home" aria-label='Home'  className={open ? "pr-10" : ""}>
             <img src="/images/McCarthy-Godlewski_Lawfirm_Logo.png" width="350px" height="100px" alt="McCarthy Godlewski LLC Law Firm Logo" />
           </Link>
         </div>
@@ -31,7 +33,7 @@ const Navbar = () => {
         <svg
           xmlns="<http://www.w3.org/2000/svg>"
           id="menu-button"
-          className={`h-8 w-8 cursor-pointer block text-white ml-4 ${open ? "self-end -mt-[66px]" : ""} lg:hidden`}
+          className={`h-6 w-6 cursor-pointer block text-white ml-4 ${open ? "self-end -mt-[78px]" : ""} lg:hidden`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -46,21 +48,21 @@ const Navbar = () => {
         </svg>
 
         {/* Menu */}
-        <div id="menu" className={`${open ? "block" : "hidden"} w-full lg:flex lg:items-center lg:w-auto`}>
+        <div id="menu" className={`${open ? "block pt-8" : "hidden"} w-full lg:flex lg:items-center lg:w-auto`}>
 
-          <ul className="flex flex-col p-4 w-full lg:w-auto lg:flex-row lg:justify-between lg:items-center">
-            <li className="p-4 border-b border-sky lg:border-0">
+          <ul className="flex flex-col w-full lg:w-auto lg:flex-row lg:justify-between lg:items-center lg:h-[132px]">
+            <li className="p-4 border-b border-sky lg:border-0 lg:h-full lg:flex lg:items-center">
               <Link href="/" className={`${pathname === "/" ? "text-secondary" : "text-white"} hover:text-sky`}>
                 Home
               </Link>
             </li>
-            <li className="p-4 border-b border-sky lg:border-0">
+            <li className="p-4 border-b border-sky lg:border-0 lg:h-full lg:flex lg:items-center">
               <Link href="/attorney-profiles" className={`${pathname === "/attorney-profiles" ? "text-secondary" : "text-white"} hover:text-sky`}>
                 Attorney Profiles
               </Link>
             </li>
             <li 
-              className="p-4 pr-0 border-b border-sky lg:border-0 lg:pr-4"
+              className={`p-4 border-b border-sky lg:border-0 lg:h-full lg:flex lg:items-center ${open ? "pr-0" : ""}`}
               onMouseEnter={() => {
                 if (isDesktop) setSubMenuOpen(true)
               }}
@@ -73,7 +75,7 @@ const Navbar = () => {
                 id="sub-menu" 
                 className={`
                   ${open || subMenuOpen ? "block" : "hidden"} 
-                  ${subMenuOpen ? "absolute bg-secondary pr-16 pb-4 border-t-[54px] border-primary" : "relative"}
+                  ${subMenuOpen ? "absolute bg-secondary pr-16 pb-4 mt-[300px]" : "relative"}
                 `}
               >
                 <li className={`p-4 pr-0 border-b border-t ${subMenuOpen ? "mt-0" : "mt-4"} border-sky lg:border-0`}>
@@ -93,12 +95,12 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="p-4 border-b border-sky lg:border-0">
+            <li className="p-4 border-b border-sky lg:border-0 lg:h-full lg:flex lg:items-center">
               <Link href="/links" className={`${pathname === "/links" ? "text-secondary" : "text-white"} hover:text-sky`}>
                 Links
               </Link>
             </li>
-            <li className="p-4 pb-0 lg:pb-4">
+            <li className="p-4 lg:h-full lg:flex lg:items-center">
               <Link href="/contact" className={`${pathname === "/contact" ? "text-secondary" : "text-white"} hover:text-sky`}>
                 Contact
               </Link>

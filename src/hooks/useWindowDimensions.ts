@@ -1,4 +1,3 @@
-"use client"
 import { useState, useEffect } from "react";
 
 // https://newbedev.com/javascript-get-screen-size-in-react-code-example

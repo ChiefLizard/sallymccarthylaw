@@ -17,7 +17,7 @@ export default function Contact() {
       <div className="w-full bg-secondary px-4 py-8">
         <h2 className="text-primary text-center m-0 text-xl leading-tight lg:text-2xl">430 Ahnaip Street, Menasha, WI 54952</h2>
       </div>
-      <div className="p-4 container container-sm">
+      <div className="p-4 container container-sm pb-16">
         <h1 className="text-secondary text-2xl text-center tracking-wide my-8">Phone: <a href="tel:+19204287505" className="hover:text-primary">920-428-7505</a>  &nbsp;|  &nbsp;Fax: 920-720-2170</h1>
 
       </div>
