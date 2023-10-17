@@ -57,7 +57,7 @@ p:last-child {
 p a, p a:visited {
   color: var(--secondary);
 }
-p a:hover {
+p a:hover, li a:hover {
   color: var(--primary);
 }
 

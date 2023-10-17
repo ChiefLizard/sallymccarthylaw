@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import ContactForm from '@/components/contact-form';
-
-const siteName = process.env.NEXT_PUBLIC_SITE_NAME;
+import { siteName } from '@/constants';
 
 export const metadata: Metadata = {
   title: `Contact Us - ${siteName}`,

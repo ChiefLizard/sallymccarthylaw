@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
-
-const siteName = process.env.NEXT_PUBLIC_SITE_NAME;
+import { siteName } from '@/constants';
 
 export const metadata: Metadata = {
   title: `Additional Resources - ${siteName}`,
@@ -13,17 +12,17 @@ export default function Links() {
 
       <div className="p-4 container container-sm">
         <h1 className="text-primary">Links</h1>
-        <p className="font-bold">
+        <h2 className="text-lg">
         For further resources see the following links: 
-        </p>
-        <ol>
+        </h2>
+        <ol className="list-decimal list-inside mb-4">
           <li><a href="https://wisconsintechnologycouncil.com/" target="_blank">Wisconsin Technology Council</a></li>
           <li><a href="https://www.bioforward.org/" target="_blank">Wisconsin Biotechnology Association</a></li>
         </ol>
-        <p className="font-bold">
+        <h2 className="text-lg">
         National and International Links: 
-        </p>
-        <ol>
+        </h2>
+        <ol className="list-decimal list-inside">
           <li><a href="https://www.uspto.gov/" target="_blank">U.S. Patent & Trademark Office</a></li>
           <li><a href="https://www.copyright.gov/" target="_blank">U.S. Copyright Office</a></li>
           <li><a href="https://www.energy.gov/science-innovation" target="_blank">U.S. Department of Energy Inventions & Innovation Program</a></li>

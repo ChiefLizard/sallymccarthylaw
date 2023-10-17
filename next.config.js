@@ -1,10 +1,13 @@
 /** @type {import('next').NextConfig} */
 
-const isProd = process.env.NEXT_PUBLIC_ENVIRONMENT === "PRODUCTION"
+const isProd = process.env.NODE_ENV === "production"
 
 const nextConfig = {
   output: 'export',
-  assetPrefix: isProd ? '/sallymccarthylaw' : ''
+  assetPrefix: isProd ? '/sallymccarthylaw' : '',
+  images: {
+    unoptimized: true,
+  }
 }
 
 module.exports = nextConfig

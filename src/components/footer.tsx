@@ -1,6 +1,7 @@
+import { siteName } from "@/constants";
+
 const d = new Date();
 const year = d.getFullYear();
-const siteName = process.env.NEXT_PUBLIC_SITE_NAME;
 
 const Footer = () => {
   return (
