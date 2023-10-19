@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 import Link from 'next/link';
 import useWindowDimensions from '@/hooks/useWindowDimensions';
 import useScrollPosition from '@/hooks/useScrollPosition';
@@ -25,7 +26,7 @@ const Navbar = () => {
         {/* Logo */}
         <div id="logo" className="h-[132px] flex items-center">
           <Link href="/" title="Home" aria-label='Home'  className={open ? "pr-10" : ""}>
-            <img src="/images/McCarthy-Godlewski_Lawfirm_Logo.png" width="350px" height="100px" alt="McCarthy Godlewski LLC Law Firm Logo" />
+            <Image src="/images/McCarthy-Godlewski_Lawfirm_Logo.png" width={350} height={100} alt="McCarthy Godlewski LLC Law Firm Logo" />
           </Link>
         </div>
 

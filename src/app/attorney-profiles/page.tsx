@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { Metadata } from 'next'
 import { siteName } from '@/constants';
 
@@ -28,10 +29,10 @@ const Profile = () => {
   
           </div>
           <div className="pb-12 flex lg:pl-24 lg:pb-0">
-            <img 
+            <Image 
               src="/images/Sally-McCarthy-Godlewski.jpg"
-              width="240px"
-              height="300px"
+              width={240}
+              height={300}
               alt="Sally McCarthy Godlewski"
               className="mt-0 lg:mt-20"
             />
