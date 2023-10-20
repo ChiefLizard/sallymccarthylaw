@@ -24,7 +24,7 @@ const ContactForm = () => {
   return (
     <form
       id="formspree-contact-form"
-      action=""
+      action="https://formspree.io/f/xnqkwqvn"
       method="POST"
       className="container container-sm"
     >
